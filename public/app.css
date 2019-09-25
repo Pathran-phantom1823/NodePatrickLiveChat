@@ -1,0 +1,269 @@
+/* Variabls */
+:root {
+	--primary-blue: #2196f3;
+	--dark-blue: #1976d2;
+	--light-blue: #bbdefb;
+	--white: #ffffff;
+	--primary-text: #212121;
+	--secondary-text: #757575;
+	--light-gray: #bdbdbd;
+}
+
+/* Resets */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Helvetica, sans-serifs;
+	color: var(--primary-text);
+}
+
+/* Helper Classes */
+
+.flex {
+	display: flex;
+}
+
+.flex-center {
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.primary-text {
+	color: var(--primary-text);
+}
+
+.secondary-text {
+	color: var(--secondary-text);
+}
+
+.light-text {
+	color: var(--light-blue);
+}
+
+.hidden {
+	display: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.mb-2 {
+	margin-bottom: 20px;
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: 300;
+}
+
+#appContainer {
+	height: 100vh;
+	width: 100vw;
+	align-items: stretch;
+	background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/B2IPYFY4ipb5vdgt/raindrops-on-the-window-abstract-background-blue-tone_slphvebc_thumbnail-full01.png');
+	overflow: hidden;
+}
+
+#mainContent {
+	width: 100%;
+	justify-content: center;
+}
+
+/* Header */
+header {
+	height: 150px;
+	background-color: var(--dark-blue);
+	width: 100%;
+	color: white;
+}
+
+header .container {
+	height: 100%;
+	align-items: left;
+}
+
+/* Login */
+
+#login {
+	/* background:transparent; */
+	background-color: rgba(0,0,0 .10);  
+ 	backdrop-filter: blur(2px);
+	 box-shadow: 1px 1px 2px black, 0 0 25px lightblue, 0 0 5px black;
+	padding: 40px 100px;
+	margin-top: -100px;
+	border-radius: 30px;
+	height: 50%;
+}
+
+#loginForm {
+	margin-top: 20px;
+	position: relative;
+	left: 100px;
+	
+}
+
+/* Form Elements */
+
+input {
+	height: 40px;
+	padding: 10px;
+	background-color: var(--light-blue);
+	border: none;
+	color: var(--secondary-text);
+}
+
+button .loginBtn {
+	height: 40px;
+	padding: 0 15px;
+	background-color: var(--primary-blue);
+	color: white;
+	border: none;
+	
+}
+
+#sendBtn{
+	height: 40px;
+	padding: 0 15px;
+	background-color: var(--primary-blue);
+	/* color: white; */
+	border-radius:50px;
+}
+
+#sendBtn:hover{
+	background-color: green;
+}
+
+/* Chat */
+
+#chat {
+	background-color: rgba(0, 0, 0, .15);  
+ 	backdrop-filter: blur(2px);
+	box-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	height: 100px;
+	margin: 25px 0;
+	padding: 25px 25px;
+	color: white;
+	overflow-y: scroll;
+	border-radius: 30px;
+}
+
+#messageForm {
+	margin-bottom: 25px;
+}
+
+.message {
+	background-color: var(--primary-blue);
+	padding: 20px;
+	width: 50%;
+	margin-bottom: 20px;
+	padding: 1em;
+	text-align: left;
+	 line-height: 1.5em;
+	 border-radius: .4em;
+}
+
+.message-right {
+	background: var(--light-blue);
+	color: var(--primary-text);
+	margin-left: 20%;
+	
+}
+
+.message-right .message-date {
+	color: var(--primary-text);
+}
+
+.message-details {
+	margin-bottom: 5px;
+}
+
+.message-author {
+	font-weight: 800;
+}
+
+.message-date {
+	font-weight: 100;
+	font-size: 14px;
+}
+
+.message-content {
+	font-weight: 100;
+}
+ #users{	
+	background-image: 	rgb(204, 217, 255, 0.5);
+	position: relative;
+	right: 50%;
+	width: 40%;
+ }
+
+ .me {
+	position: relative;
+	background:	rgb(0, 64, 255, 0.3);
+	box-shadow: 1px 1px 2px black, 0 0 5px black;	
+	border-radius: .4em;
+	width: 70%;
+	float: right;
+}
+
+.me:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-left-color: rgb(0, 64, 255, 0.3);
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+	margin-right: -20px;	
+}
+
+ .you {
+	position: relative;
+	background: 	rgb(255, 128, 0, 0.3);
+	box-shadow: 1px 1px 2px black, 0 0 5px black;
+	border-radius: .4em;
+	width: 70%;
+	float: left;
+}
+
+ .you:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: rgb(255, 128, 0, 0.3);
+	border-left: 0;
+	border-top: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+	
+}
+
+#userList{
+	font-size: 20px;
+}
